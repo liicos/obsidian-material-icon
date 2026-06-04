@@ -1,3 +1,4 @@
+# Build plugin zip and attach to GitHub Release (tag push or manual run).
 name: Release
 
 on:
