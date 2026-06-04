@@ -1,0 +1,36 @@
+{
+  "name": "obsidian-material-icon",
+  "version": "1.0.0",
+  "description": "Material Design file icons for Obsidian file explorer",
+  "license": "MIT",
+  "author": "liicos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liicos/obsidian-material-icon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/liicos/obsidian-material-icon/issues"
+  },
+  "homepage": "https://github.com/liicos/obsidian-material-icon#readme",
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "material-icons",
+    "file-icons"
+  ],
+  "main": "main.js",
+  "scripts": {
+    "build-icons": "node scripts/build-icons.mjs",
+    "dev": "node esbuild.config.mjs",
+    "build": "node scripts/build-icons.mjs && tsc --noEmit --skipLibCheck && node esbuild.config.mjs production"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.25.0",
+    "material-icon-theme": "^5.35.0",
+    "obsidian": "latest",
+    "tslib": "^2.6.0",
+    "typescript": "^5.4.0"
+  }
+}

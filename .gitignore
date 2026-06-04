@@ -1,0 +1,5 @@
+node_modules/
+main.js
+*.js.map
+src/icon-data.ts
+AGENTS.md
