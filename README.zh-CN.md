@@ -4,7 +4,7 @@
 
 在 Obsidian 文件浏览器中，用 [Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme) 图标替换默认图标，按文件扩展名与文件名自动匹配。
 
-![文件浏览器 Material 图标效果](docs/screenshots/file-explorer.png)
+<img src="docs/screenshots/file-explorer.png" alt="文件浏览器 Material 图标效果" width="480" />
 
 ## 截图
 
@@ -16,19 +16,19 @@
 
 可分别开关文件 / 文件夹图标、启用自定义规则，并切换设置界面语言（支持 10 种语言）。
 
-![设置页](docs/screenshots/settings.png)
+<img src="docs/screenshots/settings.png" alt="设置页" width="480" />
 
 ### 自定义规则
 
 为任意扩展名添加规则（不含前导点号），从 Material Icon Theme 图标库中选择图标。开启后，自定义规则优先于默认匹配。
 
-![添加自定义规则](docs/screenshots/custom-rule.png)
+<img src="docs/screenshots/custom-rule.png" alt="添加自定义规则" width="480" />
 
 ### 图标选择器
 
 配置自定义规则时可搜索、浏览 500+ 图标。
 
-![图标选择器](docs/screenshots/icon-picker.png)
+<img src="docs/screenshots/icon-picker.png" alt="图标选择器" width="480" />
 
 ## 功能
 

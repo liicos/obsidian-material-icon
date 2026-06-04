@@ -4,7 +4,7 @@
 
 Replace the default file explorer icons in Obsidian with [Material Icon Theme](https://github.com/PKief/vscode-material-icon-theme) icons, matched by file extension and filename.
 
-![File explorer with Material icons](docs/screenshots/file-explorer.png)
+<img src="docs/screenshots/file-explorer.png" alt="File explorer with Material icons" width="480" />
 
 ## Screenshots
 
@@ -16,19 +16,19 @@ Icons are applied by extension and filename — canvas notes, Markdown templates
 
 Toggle file and folder icons independently, enable custom rules, and switch the settings UI language (10 languages supported).
 
-![Settings](docs/screenshots/settings.png)
+<img src="docs/screenshots/settings.png" alt="Settings" width="480" />
 
 ### Custom rules
 
 Add a rule for any extension (without the leading dot) and pick an icon from the Material Icon Theme library. Custom rules override default matching when enabled.
 
-![Add custom rule](docs/screenshots/custom-rule.png)
+<img src="docs/screenshots/custom-rule.png" alt="Add custom rule" width="480" />
 
 ### Icon picker
 
 Search and browse 500+ icons when configuring a custom rule.
 
-![Icon picker](docs/screenshots/icon-picker.png)
+<img src="docs/screenshots/icon-picker.png" alt="Icon picker" width="480" />
 
 ## Features
 
