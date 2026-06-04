@@ -3,7 +3,7 @@
   "name": "Material File Icons",
   "version": "1.0.0",
   "minAppVersion": "1.4.0",
-  "description": "Replace default file icons in the file explorer with Material Design icons based on file extension and filename.",
+  "description": "Replace file explorer icons with Material Design icons matched by file extension and filename.",
   "author": "liicos",
   "authorUrl": "https://github.com/liicos",
   "isDesktopOnly": false

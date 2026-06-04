@@ -44,6 +44,8 @@ Search and browse 500+ icons when configuring a custom rule.
 
 ### From a release (recommended)
 
+> Release tags match `manifest.json` version exactly (e.g. `1.0.0`, not `v1.0.0`) for Obsidian community installs.
+
 1. Download from [Releases](https://github.com/liicos/obsidian-material-icon/releases):
    - **Zip:** `material-file-icons-x.x.x.zip` — extract into `.obsidian/plugins/`
    - **Or** download `main.js`, `manifest.json`, and `styles.css` into `.obsidian/plugins/material-file-icons/` (required for Obsidian community install)

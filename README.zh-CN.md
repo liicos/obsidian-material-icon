@@ -44,6 +44,8 @@
 
 ### 从 Release 安装（推荐）
 
+> Release 的 tag 必须与 `manifest.json` 里的 `version` 完全一致（如 `1.0.0`，不要写成 `v1.0.0`），社区插件才能正确安装。
+
 1. 从 [Releases](https://github.com/liicos/obsidian-material-icon/releases) 下载：
    - **Zip：** `material-file-icons-x.x.x.zip` — 解压到 `.obsidian/plugins/`
    - **或** 将 `main.js`、`manifest.json`、`styles.css` 放入 `.obsidian/plugins/material-file-icons/`（社区插件安装需要单文件 Release）

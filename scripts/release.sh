@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-TAG="${1:-v$(node -p "require('./manifest.json').version")}"
+TAG="${1:-$(node -p "require('./manifest.json').version")}"
 
 echo "Building..."
 npm run build
