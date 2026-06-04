@@ -32,23 +32,14 @@ jobs:
       - name: Package plugin zip
         run: chmod +x scripts/package-release.sh && ZIP=$(./scripts/package-release.sh) && echo "ZIP=$ZIP" >> "$GITHUB_ENV"
 
-      - name: Remove loose plugin files from release
+      - name: Reset release before upload
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.ref_name }}
         run: |
-          set -euo pipefail
-          ASSETS="$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json assets -q '.assets[] | "\(.id)\t\(.name)"' 2>/dev/null || true)"
-          [[ -z "$ASSETS" ]] && exit 0
-          while IFS=$'\t' read -r id name; do
-            [[ -z "$id" ]] && continue
-            case "$name" in
-              main.js|manifest.json|styles.css|obsidian-material-icon-*.zip)
-                gh api --method DELETE "/repos/${GITHUB_REPOSITORY}/releases/assets/${id}"
-                echo "Deleted ${name}"
-                ;;
-            esac
-          done <<< "$ASSETS"
+          # Recreate the release so old loose files (main.js, etc.) are not kept.
+          # Tag is preserved; GitHub re-adds source archives on the new release.
+          gh release delete "$TAG" --repo "$GITHUB_REPOSITORY" --yes 2>/dev/null || true
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
