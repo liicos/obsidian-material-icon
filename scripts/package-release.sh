@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Build obsidian-material-icon-<version>.zip for GitHub Releases.
+# Build material-file-icons-<version>.zip for GitHub Releases.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-PLUGIN_ID="obsidian-material-icon"
+PLUGIN_ID="material-file-icons"
 VERSION="$(node -p "require('./manifest.json').version")"
-OUT="obsidian-material-icon-${VERSION}.zip"
+OUT="material-file-icons-${VERSION}.zip"
 
 rm -rf dist
 mkdir -p "dist/${PLUGIN_ID}"

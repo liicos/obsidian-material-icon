@@ -44,9 +44,12 @@ Search and browse 500+ icons when configuring a custom rule.
 
 ### From a release (recommended)
 
-1. Download `obsidian-material-icon-x.x.x.zip` from [Releases](https://github.com/liicos/obsidian-material-icon/releases)
-2. Extract the zip into your vault’s `.obsidian/plugins/` folder (it contains an `obsidian-material-icon/` directory with `main.js`, `manifest.json`, and `styles.css`)
+1. Download from [Releases](https://github.com/liicos/obsidian-material-icon/releases):
+   - **Zip:** `material-file-icons-x.x.x.zip` — extract into `.obsidian/plugins/`
+   - **Or** download `main.js`, `manifest.json`, and `styles.css` into `.obsidian/plugins/material-file-icons/` (required for Obsidian community install)
 3. Enable **Material File Icons** under **Settings → Community plugins**
+
+> **Upgrading from an older build?** The plugin id is now `material-file-icons`. Remove `.obsidian/plugins/obsidian-material-icon/` if present, then install into `material-file-icons/`.
 
 ### Manual build
 
@@ -55,7 +58,7 @@ git clone https://github.com/liicos/obsidian-material-icon.git
 cd obsidian-material-icon
 npm install
 npm run build
-cp main.js manifest.json styles.css /path/to/vault/.obsidian/plugins/obsidian-material-icon/
+cp main.js manifest.json styles.css /path/to/vault/.obsidian/plugins/material-file-icons/
 ```
 
 ## Development

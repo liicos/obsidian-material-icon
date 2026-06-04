@@ -1,4 +1,4 @@
-# Build plugin zip and attach to GitHub Release (tag push or manual run).
+# Build plugin, attach zip + Obsidian-required files to GitHub Release.
 name: Release
 
 on:
@@ -47,4 +47,8 @@ jobs:
           tag_name: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.ref_name }}
           name: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.ref_name }}
           generate_release_notes: true
-          files: ${{ env.ZIP }}
+          files: |
+            ${{ env.ZIP }}
+            main.js
+            manifest.json
+            styles.css

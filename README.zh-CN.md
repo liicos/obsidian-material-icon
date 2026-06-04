@@ -44,9 +44,12 @@
 
 ### 从 Release 安装（推荐）
 
-1. 从 [Releases](https://github.com/liicos/obsidian-material-icon/releases) 下载 `obsidian-material-icon-x.x.x.zip`
-2. 解压到库的 `.obsidian/plugins/` 目录（zip 内含 `obsidian-material-icon/` 文件夹，其中有 `main.js`、`manifest.json`、`styles.css`）
+1. 从 [Releases](https://github.com/liicos/obsidian-material-icon/releases) 下载：
+   - **Zip：** `material-file-icons-x.x.x.zip` — 解压到 `.obsidian/plugins/`
+   - **或** 将 `main.js`、`manifest.json`、`styles.css` 放入 `.obsidian/plugins/material-file-icons/`（社区插件安装需要单文件 Release）
 3. 在 **设置 → 第三方插件** 中启用 **Material File Icons**
+
+> **从旧版升级？** 插件 id 已改为 `material-file-icons`。若存在 `.obsidian/plugins/obsidian-material-icon/`，请先删除，再安装到 `material-file-icons/` 目录。
 
 ### 本地构建
 
@@ -55,7 +58,7 @@ git clone https://github.com/liicos/obsidian-material-icon.git
 cd obsidian-material-icon
 npm install
 npm run build
-cp main.js manifest.json styles.css /你的库路径/.obsidian/plugins/obsidian-material-icon/
+cp main.js manifest.json styles.css /你的库路径/.obsidian/plugins/material-file-icons/
 ```
 
 ## 开发

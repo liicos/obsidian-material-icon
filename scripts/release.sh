@@ -12,11 +12,13 @@ echo "Packaging..."
 chmod +x scripts/package-release.sh
 ZIP="$(./scripts/package-release.sh)"
 
+ASSETS=(main.js manifest.json styles.css "$ZIP")
+
 echo "Publishing release ${TAG}..."
 if gh release view "$TAG" &>/dev/null; then
-  gh release upload "$TAG" "$ZIP" --clobber
+  gh release upload "$TAG" "${ASSETS[@]}" --clobber
 else
-  gh release create "$TAG" "$ZIP" --generate-notes
+  gh release create "$TAG" "${ASSETS[@]}" --generate-notes
 fi
 
 echo "Done: https://github.com/liicos/obsidian-material-icon/releases/tag/${TAG}"
