@@ -28,13 +28,13 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - name: Package plugin zip
+        run: chmod +x scripts/package-release.sh && ZIP=$(./scripts/package-release.sh) && echo "ZIP=$ZIP" >> "$GITHUB_ENV"
+
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.ref_name }}
           name: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.tag || github.ref_name }}
           generate_release_notes: true
-          files: |
-            main.js
-            manifest.json
-            styles.css
+          files: ${{ env.ZIP }}

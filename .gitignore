@@ -3,3 +3,5 @@ main.js
 *.js.map
 src/icon-data.ts
 AGENTS.md
+dist/
+obsidian-material-icon-*.zip
